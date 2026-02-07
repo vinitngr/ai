@@ -1,0 +1,35 @@
+{
+  "name": "@vinitngr/serper-v",
+  "version": "2.0.0",
+  "description": "Optimal Serper Search CLI for AI Agents",
+  "main": "dist/index.js",
+  "bin": {
+    "serperV": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "SKILL.md",
+    "README.md"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:all": "node test.js"
+  },
+  "keywords": [
+    "serper",
+    "search",
+    "cli",
+    "ai",
+    "agent",
+    "scrape"
+  ],
+  "author": "vinitngr",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^25.2.1",
+    "typescript": "^5.9.3"
+  }
+}
