@@ -86,7 +86,7 @@ npx quick-mcp build server.js -o server.mcp.js
 
 ```bash
 # With auth
-curl -X POST http://localhost:4000 \
+curl -X POST http://localhost:4000/mcp \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer secret" \
   -d '{"tool":"add","args":{"a":2,"b":3}}'
