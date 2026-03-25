@@ -47,7 +47,7 @@ function printBanner({
   const transportLine =
     transport.type === "stdio"
       ? "stdio"
-      : `http://${transport.host ?? "localhost"}:${transport.port}`;
+      : `http://${transport.host ?? "localhost"}:${transport.port}/mcp`;
 
   console.error(`
 ╔══════════════════════════════════════╗
@@ -78,6 +78,12 @@ function startHttpServer(
         res.writeHead(204);
         return res.end();
       }
+    }
+
+    const url = req.url?.split("?")[0];
+    if (url !== "/mcp") {
+      res.writeHead(404);
+      return res.end("Not found");
     }
 
     if (req.method !== "POST") {
